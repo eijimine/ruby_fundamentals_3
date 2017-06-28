@@ -11,88 +11,133 @@ family = {:Hisa => 37, :Angela => 34, :Ronnie => 36, :Pat => 34}
 
 mov = {:'1999' => ['The Matrix', 'Star Wars: Episode 1', 'The Mummy'], :'2009' => ['Avatar', 'Star Trek', 'District 9'], :'2019' => ['How to Train Your Dragon 3', 'Toy Story 4', 'Star Wars: Episode 9']}
 
-canada = {:name => 'Canada', :continent => 'North America', :island? => 'No'}
-usa = {:name => 'USA', :continent => 'North America', :island? => 'No'}
-japan = {:name => 'Japan', :continent => 'Asia', :island? => 'Yes'}
+country_list = [{:name => 'Canada', :continent => 'North America', :island => false},
+{:name => 'USA', :continent => 'North America', :island => false},
+{:name => 'Japan', :continent => 'Asia', :island => true}]
+
+
+
+# Exercise 1
+puts coin
+puts fav_colours[0]
+puts age.sort
+age << 0
+puts movies['Whiplash']
+
+# Exercise 2
+puts fav_colours[-1]
+cities[:Hong_Kong] = '7.306 Million'
+coin.reverse!
+puts "The population of Tokyo is #{cities[:Tokyo]}."
+
+artists.each do |artist|
+  puts "I think #{artist} is awesome!"
+end
+
+# Exercise 3
+puts artists[0..1]
+
+movies.each { |movie, year| puts "#{movie} came out in #{year}" }
+
+puts age.sort.reverse
+
+movies['Beauty and the Beast'] = ['1991', '2017']
+puts movies
+
+# Exercise 4
+puts age.select { |num| num <= 30  }
+
+puts age.sort[-1]
+
+puts coin.count('Heads')
+
+artists.delete('Metallica')
+cities['Toronto'] = '1'
+puts cities
+
+#Exercise 5
+puts cities[:Toronto] + cities[:Tokyo] + cities[:Montreal]
+puts cities.values.sum
+
+family.each do |name, age|
+  if age <= 35
+    puts "#{name} is old"
+  else
+    puts "#{name} is young"
+  end
+end
+
+def family_age(name, oldoryoung)
+  puts "#{name} is #{oldoryoung}"
+end
+
+family.each { |name, age| family_age(name, age <= 35 ? "old" : "young" )}
+
+puts("#{name} is old") : puts("#{name} is young")}
+
+  if age <= 35
+    puts "#{name} is old"
+  else
+    puts "#{name} is young"
+  end
+}
+
+puts fav_colours[-2..-1]
+
+family.each {|name, age| puts "#{name} is #{age + 1} old" }
+
+fav_colours << 'Yellow' << 'White'
+
+# Exercise 6
+#See top of page for Hash
+#See top of page for array
+
+row1 = [1, 2, 3]
+row2 = [4, 5, 6]
+row3 = [7, 8, 9]
+row4 = ['*', 0, '#']
+
+dial_pad = [row1, row2, row3, row4]
+
+puts dial_pad
+
+skate = []
+
+20.times { skate << 'I will not skateboard in the halls'}
+
+puts skate
 
 20.times do
   puts "I will not skateboard in the halls"
 end
 
+num = (1..50).to_a
 
-# countries = [canada, usa, japan]
+puts num.each.sum
 
-# fav_colours << 'Yellow' << 'White'
+sum = 0
+num.each do |add|
+  sum += add
+end
 
-# family.each {|name, age| puts "#{name} is #{age + 1} old" }
+puts sum
 
-# NEWER exersices above here...
+array = []
 
-# puts coin
-# puts fav_colours[0]
-# puts age.sort
-# age << 0
-# puts movies['Whiplash']
-# puts fav_colours[-1]
-# cities[:Hong_Kong] = '7.306 Million'
-# coin.reverse!
-# puts "The population of Tokyo is #{cities[:Tokyo]}."
-#
-# artists.each do |artist|
-#   puts "I think #{artist} is awesome!"
-# end
-#
-# puts artists[0..1]
-#
-# movies.each { |movie, year| puts "#{movie} came out in #{year}" }
-#
-# puts age.sort.reverse
-#
-# movies['Beauty and the Beast'] = ['1991', '2017']
-# puts movies
+50.times do |add|
+  add += 1
+  array << add
+  array << add
+  array << add
+end
 
-# puts age.select { |num| num <= 30  }
-#
-# puts age.sort[-1]
-#
-# puts coin.count('Heads')
-#
-# artists.delete('Metallica')
-# cities['Toronto'] = '1'
-# puts cities
-# puts cities[:Toronto] + cities[:Tokyo] + cities[:Montreal]
-#
-# puts
+puts array
 
-# family.each do |name, age|
-#   if age <= 35
-#     puts "#{name} is old"
-#   else
-#     puts "#{name} is young"
-#   end
-# end
+noisland = []
 
+noisland = country_list.select do |country_location|
+  country_location[:island] == false
+end
 
-# def family_age(name, oldoryoung)
-#   puts "#{name} is #{oldoryoung}"
-# end
-# #
-# #
-
-# family.each { |name, age| family_age(name, age <= 35 ? "old" : "young" )}
-
-
-  # puts("#{name} is old") : puts("#{name} is young")}
-
-
-
-#
-#   if age <= 35
-#     puts "#{name} is old"
-#   else
-#     puts "#{name} is young"
-#   end
-# }
-#
-# puts cities.values.sum
-# puts fav_colours[-2..-1]
+puts noisland
+puts country_list
