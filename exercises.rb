@@ -9,7 +9,6 @@ movies = {'Fifth Element' => '1997', 'Whiplash' => '2015', 'The Professional' =>
 cities = {:Tokyo => '13 Million', :Toronto => '6.418 Million', :Montreal => '4.099 Million'}
 family = {:Hisa => 37, :Angela => 34, :Ronnie => 36, :Pat => 34}
 
-
 puts coin
 puts fav_colours[0]
 puts age.sort
@@ -23,3 +22,14 @@ puts "The population of Tokyo is #{cities[:Tokyo]}."
 artists.each do |artist|
   puts "I think #{artist} is awesome!"
 end
+
+puts artists[0..1]
+
+
+# movies.each do |movie, year|
+#   puts "#{movie} came out in #{year}"
+# end
+
+movies.each { |movie, year| puts "#{movie} came out in #{year}" }
+
+puts age.sort.reverse
