@@ -15,3 +15,11 @@ puts fav_colours[0]
 puts age.sort
 age << 0
 puts movies['Whiplash']
+puts fav_colours[-1]
+cities[:Hong_Kong] = '7.306 Million'
+coin.reverse!
+puts "The population of Tokyo is #{cities[:Tokyo]}."
+
+artists.each do |artist|
+  puts "I think #{artist} is awesome!"
+end
